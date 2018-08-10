@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { addUser } from "../utils/addUser";
 
 export default class Signup extends Component {
   state = {
@@ -25,6 +26,7 @@ export default class Signup extends Component {
         email: this.state.email,
         password
       };
+      addUser("./register", params);
     } else {
       alert("Confirm Password is not the same as password");
     }
