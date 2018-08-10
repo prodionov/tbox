@@ -12,11 +12,9 @@ export default class LandingPage extends Component {
     const value = event.target.value;
     const name = event.target.name;
     this.setState({ [name]: value });
-    console.log(this.state);
   };
 
   redirectSignup = event => {
-    console.log("I was clicked");
     this.setState({ toSignup: true });
   };
 
@@ -36,8 +34,8 @@ export default class LandingPage extends Component {
       <div>
         <h1>Hackathon</h1>
         <form>
-          <input type="text" id="user" placeholder="Username" />
-          <input type="password" name="pwd" placeholder="Password" />
+          <input type="text" name="username" id="user" placeholder="Username" />
+          <input type="password" name="password" placeholder="Password" />
           <button onClick={this.submitRequest}>Login</button>
         </form>
         <h2>New to the hackathon?</h2>
