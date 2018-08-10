@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import { addUser } from "../utils/addUser";
+import { Redirect } from "react-router";
 
 export default class Signup extends Component {
   state = {
     username: "",
     email: "",
     password: "",
-    confirmPassword: ""
+    confirmPassword: "",
+    toLanding: false
   };
 
   handleChange = event => {
@@ -26,13 +28,22 @@ export default class Signup extends Component {
         email: this.state.email,
         password
       };
-      addUser("./register", params);
+      addUser("./register", params).then(response => {
+        if (response.result === "success") {
+          alert(`${params.username}, now please log in`);
+          this.setState({ toLanding: true });
+        }
+      });
     } else {
       alert("Confirm Password is not the same as password");
     }
   };
 
   render() {
+    console.log(this.state.toLanding);
+    if (this.state.toLanding) {
+      return <Redirect to="/" />;
+    }
     return (
       <div>
         <h1>Hackathon</h1>

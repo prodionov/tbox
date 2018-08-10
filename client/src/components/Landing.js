@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { addUser } from "../utils/addUser";
 import { Redirect } from "react-router";
 
 export default class LandingPage extends Component {
@@ -24,6 +25,11 @@ export default class LandingPage extends Component {
       username: this.state.username,
       password: this.state.password
     };
+    addUser("./login", params).then(response => {
+      if (response.result === "success") {
+        this.setState({ toLanding: true });
+      }
+    });
   };
 
   render() {
@@ -34,8 +40,21 @@ export default class LandingPage extends Component {
       <div>
         <h1>Hackathon</h1>
         <form>
-          <input type="text" name="username" id="user" placeholder="Username" />
-          <input type="password" name="password" placeholder="Password" />
+          <input
+            type="text"
+            name="username"
+            id="user"
+            value={this.state.username}
+            onChange={this.handleChange}
+            placeholder="Username"
+          />
+          <input
+            type="password"
+            name="password"
+            value={this.state.password}
+            onChange={this.handleChange}
+            placeholder="Password"
+          />
           <button onClick={this.submitRequest}>Login</button>
         </form>
         <h2>New to the hackathon?</h2>
