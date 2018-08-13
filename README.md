@@ -1,6 +1,4 @@
-# therapy box hackathon
-
-This project aimed to check the basic web-development skills.
+# therapy box hackathon challenge
 
 The website allows you to sign up. The registration details are stored in a database. After login, user can access
 a dashboard with six displays:
