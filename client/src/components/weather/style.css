@@ -1,0 +1,27 @@
+.weather-container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.weather-top-block {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+
+.weather-icon-container {
+  width: 25%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 50px;
+}
+
+.weather-city-p {
+  font-size: 2vh;
+  font-weight: bold;
+  margin-left: 50px;
+}
