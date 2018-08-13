@@ -1,0 +1,30 @@
+.News-block {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.News-description {
+  padding-left: 0.5vw;
+  padding-right: 1vw;
+  font-size: 2vw;
+}
+
+/*.News-image {
+  width: 200px;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+}*/
+p {
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+.News-big-image {
+  width: 30%;
+}
