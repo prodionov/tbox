@@ -16,7 +16,6 @@ export default class Signup extends Component {
     const value = event.target.value;
     const name = event.target.name;
     this.setState({ [name]: value });
-    console.log(this.state);
   };
 
   submitRequest = event => {
@@ -33,6 +32,8 @@ export default class Signup extends Component {
         if (response.result === "success") {
           alert(`${params.username}, now please log in`);
           this.setState({ toLanding: true });
+        } else {
+          alert("This username or email already registered");
         }
       });
     } else {
@@ -41,7 +42,6 @@ export default class Signup extends Component {
   };
 
   render() {
-    console.log(this.state.toLanding);
     if (this.state.toLanding) {
       return <Redirect to="/" />;
     }

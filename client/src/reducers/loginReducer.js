@@ -10,6 +10,8 @@ export function loginUserAction(params) {
           type: LOGIN_USER,
           payload: { isLoggedin: true, username: params.username }
         });
+      } else {
+        alert("ther is no such user");
       }
     });
   };

@@ -14,13 +14,10 @@ const addUser = async (req, res, next) => {
 
 const loginUser = async (req, res, next) => {
   let data = req.body;
-  console.log("data", data);
   try {
     await findUserDB(data);
     res.send(JSON.stringify({ result: "success" }));
-    console.log("we sent success");
   } catch (err) {
-    console.log("err", err);
     res.send(JSON.stringify({ result: "failure" }));
   }
   next();
@@ -28,10 +25,8 @@ const loginUser = async (req, res, next) => {
 
 const teamWins = async (req, res, next) => {
   let team = req.body;
-  console.log("team", team);
   try {
     let results = await teamWinsDB(team);
-    console.log(results);
     res.send(JSON.stringify({ result: results }));
   } catch (err) {
     res.send(JSON.stringify({ result: "failure" }));

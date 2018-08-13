@@ -31,11 +31,7 @@ class NewsMini extends Component {
             <h5>{title}</h5>
           </div>
           <div className="News-image">
-            <img
-              className="News-small-image"
-              src={urlToImage}
-              alt="news image"
-            />
+            <img className="News-small-image" src={urlToImage} alt="news" />
           </div>
           <div className="News-description-mini">
             <p>{description}</p>

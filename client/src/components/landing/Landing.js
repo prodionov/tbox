@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import { Redirect } from "react-router";
 import { connect } from "react-redux";
 import Login from "../login/Login";
 import Weather from "../weather/Weather";
 import Photos from "../photos/Photos";
-import Todo from "../todo/Todo";
 import NewsMini from "../news-mini/News-mini";
 import SportMini from "../sport-mini/SportMini";
 import PieChart from "../pieChart/PieChart";
