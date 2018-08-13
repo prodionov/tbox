@@ -1,0 +1,38 @@
+.sport-button {
+  background: transparent;
+  border: none !important;
+  font-size: 0;
+}
+
+.sport-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sport-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  font-size: 1.5em;
+  color: white;
+  outline: none;
+  border-bottom: solid;
+  border-color: white;
+  margin: 30px;
+  width: 300px;
+}
+
+ul {
+  list-style-type: none;
+  color: white;
+  font-weight: bold;
+}
+
+.sport-list-item {
+  padding-top: 10px;
+}
