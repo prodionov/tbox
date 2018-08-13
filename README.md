@@ -18,3 +18,5 @@ a dashboard with six displays:
 * PostgreSQL
 * React
 * Redux
+
+![dashboard](https://user-images.githubusercontent.com/19667238/44038552-f0514f22-9f0e-11e8-9c31-f733cf04503a.png)
