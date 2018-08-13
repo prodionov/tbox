@@ -32,12 +32,10 @@ h1 {
   flex-direction: column;
   box-sizing: border-box;
   margin: 20px;
-  /*border: solid;*/
 }
 
 .displayTitle {
   width: 100%;
-  /*background-color: #ffd11a;*/
 }
 
 .displayItem {
