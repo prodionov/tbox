@@ -1,0 +1,48 @@
+.signup-page {
+  color: white;
+}
+
+::placeholder {
+  color: white;
+}
+
+/*button {
+  height: 50px;
+  width: 200px;
+  border-radius: 25px;
+}*/
+
+.register-btn {
+  height: 50px;
+  width: 200px;
+  border-radius: 25px;
+  background-image: url("./assets/Register_button.png");
+  background-repeat: no-repeat;
+  background-size: 150px 40px;
+  background-size: contain;
+}
+
+.form-input {
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  font-size: 1.5em;
+  color: white;
+  outline: none;
+  border-bottom: solid;
+  border-color: white;
+  margin: 30px;
+  width: 300px;
+}
+
+.signup-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
