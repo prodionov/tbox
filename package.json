@@ -22,11 +22,18 @@
   "homepage": "https://github.com/prodionov/tbox#readme",
   "dependencies": {
     "concurrently": "^3.6.1",
+    "cors": "^2.8.4",
+    "csv": "^3.1.0",
+    "d3": "^5.5.0",
     "env2": "^2.2.2",
     "express": "^4.16.3",
+    "node-fetch": "^2.2.0",
     "nodemon": "^1.18.3",
     "pg": "^7.4.3",
+    "react-redux": "^5.0.7",
     "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1"
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0"
   }
 }
