@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
 body {
+  background-image: url(https://user-images.githubusercontent.com/19667238/43990693-e5f28c3a-9d56-11e8-9efb-c75f4da1437f.png);
+  height: 100vh;
   margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  font-family: Raleway, sans-serif;
 }
