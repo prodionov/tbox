@@ -1,0 +1,66 @@
+.Display-main {
+  background-image: url(https://user-images.githubusercontent.com/19667238/43990693-e5f28c3a-9d56-11e8-9efb-c75f4da1437f.png);
+  height: 100vh;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 2rem;
+  color: white;
+}
+
+.DisplaySection {
+  display: flex;
+  max-widt: 80rem;
+  padding: 0 15px 15px;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.display {
+  background-image: url("./assets/Container.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 33.3%;
+  height: 33vh;
+  margin-bottom: 0;
+  border-radius: 2px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: 20px;
+  /*border: solid;*/
+}
+
+.displayTitle {
+  width: 100%;
+  /*background-color: #ffd11a;*/
+}
+
+.displayItem {
+  position: relative;
+  padding-bottom: 40%;
+  height: auto;
+}
+
+.displayTitle a {
+  width: 100%;
+  margin-bottom: 10px;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.displayTitle span {
+}
+
+.displayTitle h2 {
+  margin-bottom: 10px;
+  text-align: center;
+}
