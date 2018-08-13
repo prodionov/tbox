@@ -1,5 +1,5 @@
 const express = require("express");
-const { addUserDB, findUserDB } = require("../db/query/addUser");
+const { addUserDB, findUserDB, teamWinsDB } = require("../db/query/addUser");
 
 const addUser = async (req, res, next) => {
   let data = req.body;
@@ -14,13 +14,28 @@ const addUser = async (req, res, next) => {
 
 const loginUser = async (req, res, next) => {
   let data = req.body;
+  console.log("data", data);
   try {
     await findUserDB(data);
     res.send(JSON.stringify({ result: "success" }));
+    console.log("we sent success");
   } catch (err) {
+    console.log("err", err);
     res.send(JSON.stringify({ result: "failure" }));
   }
   next();
 };
 
-module.exports = { addUser, loginUser };
+const teamWins = async (req, res, next) => {
+  let team = req.body;
+  console.log("team", team);
+  try {
+    let results = await teamWinsDB(team);
+    console.log(results);
+    res.send(JSON.stringify({ result: results }));
+  } catch (err) {
+    res.send(JSON.stringify({ result: "failure" }));
+  }
+};
+
+module.exports = { addUser, loginUser, teamWins };
