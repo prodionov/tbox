@@ -1,0 +1,47 @@
+.todo-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.todo-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-input {
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  font-size: 1.5em;
+  color: white;
+  outline: none;
+  border-bottom: solid;
+  border-color: white;
+  margin: 30px;
+  width: 300px;
+}
+
+ul {
+  list-style-type: none;
+  color: white;
+  font-weight: bold;
+}
+
+.sport-list-item {
+  padding-top: 10px;
+}
+
+.todo-button {
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  border: none;
+  background-image: url("./assets/Plus_button.png");
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  background-size: contain;
+}
+
+.task-item {
+  font-size: 20px;
+}
