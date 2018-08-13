@@ -8,11 +8,19 @@
     },
     "/login": {
       "target": "http://localhost:5000"
+    },
+    "/winners": {
+      "target": "http://localhost:5000"
+    },
+    "/piechart": {
+      "target": "http://localhost:5000"
     }
   },
   "dependencies": {
+    "d3": "^5.5.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-router": "^4.3.1",
     "react-scripts": "1.1.4"
   },
   "scripts": {
