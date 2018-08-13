@@ -5,7 +5,6 @@ const url =
 const dataReq = async (req, res, next) => {
   try {
     let result = await fetch(url);
-    console.log("result", result);
     let json = await result.json();
     res.send(json);
   } catch (err) {

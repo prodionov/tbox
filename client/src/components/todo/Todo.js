@@ -4,16 +4,6 @@ import "./style.css";
 import { connect } from "react-redux";
 import Login from "../login/Login";
 
-const Task = result => {
-  console.log(result);
-  return (
-    <div className="Task-container">
-      <li>{result.task}</li>
-      <input type="checkbox" />
-    </div>
-  );
-};
-
 class Todo extends Component {
   state = {
     task: "",

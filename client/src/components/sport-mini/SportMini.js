@@ -4,7 +4,6 @@ import "./style.css";
 
 class SportMini extends Component {
   render() {
-    console.log("this.props", this.props.teams);
     let wins =
       this.props.teams.length === 0
         ? []

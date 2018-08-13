@@ -5,13 +5,11 @@ import { Provider } from "react-redux";
 import store from "./store";
 import LandingPage from "./components/landing/Landing";
 import Signup from "./components/signup/Signup";
-import Login from "./components/login/Login";
 import News from "./components/news/News";
 import Weather from "./components/weather/Weather";
 import Sport from "./components/sport/Sport";
 import Todo from "./components/todo/Todo";
 import PieChart from "./components/pieChart/PieChart";
-import { addUser } from "./utils/addUser";
 import "./index.css";
 
 export default class App extends Component {

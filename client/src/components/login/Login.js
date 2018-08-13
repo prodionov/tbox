@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Redirect } from "react-router";
-import { addUser } from "../../utils/addUser";
 import { loginUserAction } from "../../reducers/loginReducer";
-import Login_button from "./assets/Login_button.png";
 import "./style.css";
 
 class Login extends Component {

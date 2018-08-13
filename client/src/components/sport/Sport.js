@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { addUser } from "../../utils/addUser";
 import { connect } from "react-redux";
 import Login from "../login/Login";
 import { selectTeamAction } from "../../reducers/sportReducer";
@@ -27,31 +26,12 @@ class Sport extends Component {
 
   submitRequest = event => {
     event.preventDefault();
-    // let params = {
-    //   team: this.state.team
-    // };
-    // this.setState({ wins: [] });
-    // addUser("./winners", params).then(response => {
-    //   if (response.result !== "failure") {
-    //     let games = response.result.rows;
-    //     let defeatedTeams = games.reduce((acc, game) => {
-    //       if (this.state.team !== game.home_team) {
-    //         acc.push([game.game_date, game.home_team]);
-    //       } else {
-    //         acc.push([game.game_date, game.away_team]);
-    //       }
-    //       return acc;
-    //     }, []);
-    //     this.setState({ wins: defeatedTeams });
-    //   }
-    // });
     let team = { team: this.state.team };
     this.props.selectTeamAction(team);
   };
 
   render() {
     let wins = this.props.teams.length === 0 ? [] : this.props.teams[0].teams;
-    console.log("wins", this.props);
     if (!this.props.isLoggedin) {
       return <Login />;
     }

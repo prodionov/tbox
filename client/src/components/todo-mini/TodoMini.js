@@ -5,7 +5,6 @@ import("./style.css");
 class TodoMini extends Component {
   render() {
     const tasks = this.props.todoList;
-    console.log("tasks", tasks);
     return tasks.length === 0 ? (
       <h2 className="nothing-message">No tasks to display</h2>
     ) : (
