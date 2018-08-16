@@ -1,5 +1,6 @@
 const ADD_TASK = "ADD_TASK";
 const COMPLETED_TASK = "COMPLETED_TASK";
+const LOGIN_USER = "LOGIN_USER";
 let nextTask = 0;
 
 export const addTask = task => ({
@@ -28,6 +29,8 @@ export default function(state = initialState, action) {
           completed: false
         }
       ];
+    case LOGIN_USER:
+      return action.payload.todo;
     case COMPLETED_TASK:
       return state.map(
         task =>

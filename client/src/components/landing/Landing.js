@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import Login from "../login/Login";
 import Weather from "../weather/Weather";
-import Photos from "../photos/Photos";
+import PhotosMini from "../photos-mini/Photos-mini.js";
 import NewsMini from "../news-mini/News-mini";
 import SportMini from "../sport-mini/SportMini";
 import PieChart from "../pieChart/PieChart";
@@ -66,7 +66,7 @@ class LandingPage extends Component {
               </h2>
             </div>
             <div className="displayItem">
-              <Photos />
+              <PhotosMini />
             </div>
           </div>
           <div className="display">

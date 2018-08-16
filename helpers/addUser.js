@@ -1,5 +1,10 @@
 const express = require("express");
-const { addUserDB, findUserDB, teamWinsDB } = require("../db/query/addUser");
+const {
+  addUserDB,
+  findUserDB,
+  teamWinsDB,
+  todoDB
+} = require("../db/query/addUser");
 
 const addUser = async (req, res, next) => {
   let data = req.body;
@@ -12,12 +17,31 @@ const addUser = async (req, res, next) => {
   next();
 };
 
+const todo = async (req, res, next) => {
+  let task = req.body;
+  try {
+    let results = await todoDB(task);
+    res.send(JSON.stringify({ result: results }));
+  } catch (err) {
+    console.log("error", error);
+  }
+  next();
+};
+
 const loginUser = async (req, res, next) => {
   let data = req.body;
   try {
-    await findUserDB(data);
-    res.send(JSON.stringify({ result: "success" }));
+    let result = await findUserDB(data);
+    console.log("find user result", result);
+    res.send(
+      JSON.stringify({
+        result: "success",
+        todo: result.tasks,
+        user_id: result.user_id
+      })
+    );
   } catch (err) {
+    console.log("helpers err", err);
     res.send(JSON.stringify({ result: "failure" }));
   }
   next();
@@ -33,4 +57,4 @@ const teamWins = async (req, res, next) => {
   }
 };
 
-module.exports = { addUser, loginUser, teamWins };
+module.exports = { addUser, loginUser, teamWins, todo };

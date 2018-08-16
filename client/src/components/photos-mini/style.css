@@ -1,0 +1,17 @@
+.Dropzone {
+  /*background-color: url("./assets/Plus_button.png");*/
+  background-size: contain;
+}
+
+.dropped-img-mini {
+  height: 100px;
+  width: 100px;
+  margin: 5px;
+  padding-top: 30px;
+  padding-left: 20px;
+}
+
+.dropped-container-mini {
+  display: flex;
+  flex-direction: row;
+}

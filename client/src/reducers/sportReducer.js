@@ -2,7 +2,6 @@ import { addUser } from "../utils/addUser";
 const SELECT_TEAM = "SELECT_TEAM";
 
 export const selectTeamAction = team => {
-  console.log("team", team);
   return function(dispatch) {
     addUser("./winners", team).then(response => {
       console.log("response", response);
@@ -18,7 +17,6 @@ export const selectTeamAction = team => {
           }
           return acc;
         }, []);
-        console.log("almost there", defeatedTeams);
         dispatch({
           type: SELECT_TEAM,
           payload: defeatedTeams

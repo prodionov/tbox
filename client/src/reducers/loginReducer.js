@@ -8,7 +8,12 @@ export function loginUserAction(params) {
       if (result.result === "success") {
         dispatch({
           type: LOGIN_USER,
-          payload: { isLoggedin: true, username: params.username }
+          payload: {
+            isLoggedin: true,
+            username: params.username,
+            user_id: result.user_id,
+            todo: result.todo
+          }
         });
       } else {
         alert("ther is no such user");
@@ -19,7 +24,8 @@ export function loginUserAction(params) {
 
 const initialState = {
   isLoggedin: false,
-  username: ""
+  username: "",
+  user_id: ""
 };
 
 export default function(state = initialState, action) {
@@ -28,7 +34,8 @@ export default function(state = initialState, action) {
       return {
         ...state,
         isLoggedin: action.payload.isLoggedin,
-        username: action.payload.username
+        username: action.payload.username,
+        user_id: action.payload.user_id
       };
     default:
       return state;
