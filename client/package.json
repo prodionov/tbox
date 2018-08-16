@@ -14,12 +14,16 @@
     },
     "/piechart": {
       "target": "http://localhost:5000"
+    },
+    "/todo": {
+      "target": "http://localhost:5000"
     }
   },
   "dependencies": {
     "d3": "^5.5.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-dropzone": "^4.3.0",
     "react-router": "^4.3.1",
     "react-scripts": "1.1.4"
   },

@@ -5,7 +5,7 @@ import { addPhoto } from "../../reducers/photoReducer";
 import Dropzone from "react-dropzone";
 import "./style.css";
 
-class Photos extends Component {
+class PhotosMini extends Component {
   state = {
     imageList: [],
     imgSrc: null
@@ -18,7 +18,6 @@ class Photos extends Component {
     reader.addEventListener(
       "load",
       () => {
-        console.log("reader result", reader.result);
         this.setState({
           imgSrc: reader.result
         });
@@ -31,18 +30,21 @@ class Photos extends Component {
 
   render() {
     const { imgSrc } = this.state;
-    let photoList = this.props.photoList;
-    if (!this.props.isLoggedin) {
-      return <Login />;
-    }
+    //let photoList = this.props.photoList;
+    let photoList =
+      this.props.photoList.length === 0 ? [] : this.props.photoList.slice(0, 2);
     return (
-      <div className="dropped-page">
-        <h2>Photos</h2>
-        <div className="dropped-container">
-          <Dropzone onDrop={this.handleOnDrop}>Drop file here</Dropzone>
+      <div className="dropped-page-mini">
+        <div className="dropped-container-mini">
           {photoList.length !== 0
             ? photoList.map((photo, index) => {
-                return <img src={photo.photo} className="dropped-img" />;
+                return (
+                  <img
+                    src={photo.photo}
+                    key={index}
+                    className="dropped-img-mini"
+                  />
+                );
               })
             : ""}
         </div>
@@ -58,4 +60,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, { addPhoto })(Photos);
+export default connect(mapStateToProps, { addPhoto })(PhotosMini);

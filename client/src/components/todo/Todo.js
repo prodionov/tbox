@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { addTask, completedTask } from "../../reducers/todoReducer";
 import "./style.css";
 import { connect } from "react-redux";
+import { addUser } from "../../utils/addUser";
 import Login from "../login/Login";
 
 class Todo extends Component {
@@ -25,6 +26,13 @@ class Todo extends Component {
     event.preventDefault();
     let task = this.state.task;
     task ? this.props.addTask(task) : alert("You cannot add an empty task");
+    let params = {
+      task: this.state.task,
+      user_id: this.props.user_id,
+      completed: false,
+      task_id: 5
+    };
+    addUser("./todo", params);
     this.setState({ task: "" });
   };
 
@@ -79,6 +87,7 @@ class Todo extends Component {
 const mapStateToProps = state => {
   return {
     isLoggedin: state.login.isLoggedin,
+    user_id: state.login.user_id,
     username: state.login.username,
     todoList: state.todo
   };

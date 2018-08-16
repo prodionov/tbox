@@ -7,5 +7,6 @@ export const addUser = async (url, data) => {
     method: "POST"
   });
   const json = await response.json();
+  console.log("json", json);
   return json;
 };

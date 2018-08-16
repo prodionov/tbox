@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
-const { addUser, loginUser, teamWins } = require("./helpers/addUser");
+const { addUser, loginUser, teamWins, todo } = require("./helpers/addUser");
 const app = express();
 const dataReq = require("./helpers/dataReq");
 require("env2")("./config.env");
@@ -22,5 +22,6 @@ app.get("*", (req, res) => {
 app.post("/register", addUser);
 app.post("/login", loginUser);
 app.post("/winners", teamWins);
+app.post("/todo", todo);
 
 app.listen(port);
